@@ -1,0 +1,812 @@
+/* Autor: DLux
+   Kreirano: Jun 2022 - Februar 2026
+   Opis: Admin CSS fajl
+*/
+
+/*****************************************
+Sadržaj:
+
+01. Glavni stilovi (40)
+02. Header (240)
+03. Navigacija (279)
+04. Obajveštenje o nepročitanim porukama sa chata (361)
+05. Prikaz albuma na početnoj (391)
+06. Komentari (436)
+07. Footer (516)
+08. Lista pjesama (578)
+09. Forme (620)
+10. Ocjene (671)
+11. Media Queries (694)
+11.1. (min-width: 330px) and (max-width: 767px) (698)
+11.2. 
+12. 
+13. 
+14. 
+******************************************/
+
+/*****************************************
+Colors:
+- Background main header - light gold rgb(176, 166, 93);
+- Background body - light green #c2eebc
+- Background body - #333
+- Background middle panel - #4f5450
+- Background left Panel - #3b3948
+- Backgrounds buttons - dark green #1b7343
+- Navigations - #362c11
+******************************************/
+
+
+/******************************/
+/*     01. Glavni stilovi     */
+/******************************/
+html{
+	margin: 0;
+	padding: 0;
+	background-color: blue;
+}
+
+body{
+	background-color:#333;
+	color: silver; 
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding: 0;
+	/*font-family: 'Poppins', sans-serif;*/
+}
+
+.boja{
+	color: gold;
+}
+
+/* Hamburger dugme (osnovno) */
+.hamburger{
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 5px 0;
+    background: aliceblue; /* pošto ti linkovi u pomoćnom idu aliceblue */
+}
+
+.visina{
+	min-height: 76vh;
+}
+
+.visina2{
+	min-height: 76vh;
+	max-height: 77vh;
+	overflow-y: scroll;
+}
+
+.tableAdmin{
+	margin: auto;
+	max-width: 90%;
+}
+
+.tableAdmin th, .tableAdmin td {
+	border-collapse: collapse;
+	border: 1px solid yellow;
+	text-align: center;
+	padding: 5px;
+}
+
+.table-responsive
+
+ul li{
+	list-style-type: none;
+}
+
+li{
+	list-style-type: none;
+}
+
+.panel{
+	background-color: #3b3948;
+}
+
+.leftPanel{
+	background-color: #2e2e3c;
+}
+
+a{
+	text-decoration: none;
+	color: silver;
+}
+
+a:hover{
+	text-decoration: none;
+	color: silver;
+}
+
+.clickLink{
+	color: #c2ed71;
+}
+
+.clickLink:hover{
+	color: #9ae116;
+}
+
+.adminAlbumImage{
+	width: 250px;
+	position: absolute;
+	left: 100px;
+}
+
+.adminAlbumImage2{
+	width: 250px;
+	position: absolute;
+	left: 100px;
+	top: 15px;
+}
+
+.nazivAlbumPanel{
+	position: absolute;
+	left: 100px;
+	top: 50px;
+}
+
+.nazivAlbumPanel img{
+	width: 250px;
+}
+
+.editAlbum img{
+	width: 250px;
+}
+
+.razmakIzmedju{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+
+.izvodjacAdmin{
+	color: #88f588;
+}
+/*Klasa koja prikazuje boju naziva izvođača pri prikaz njegovih albuma u admin panelu za administratora i moderatore */
+
+.naslov-centar{
+	text-align: center;
+}
+
+.adminMainPanel{
+	min-height: 76vh;
+}
+
+.slikeAlbumaPregled{
+	padding: 10px;
+	min-height: 76vh;
+}	
+
+.sredina{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.sredina2{
+	align-items: center;
+	text-align: center;
+}
+
+.sredina3{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.sredinaNapomena{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
+}
+/*Ova klasa centrira tekst od napomene albuma, ali poravnato po lijevoj strani */
+
+.tekst-sredina{
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.warning-notice{
+	color: red;
+	background-color: #dddd69;
+	padding: 5px 10px 5px 10px;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+}/* tekst upozorenja/greške */
+
+.opisDodavanjaSlike{
+	font-size: 14px;
+}
+
+
+/******************************/
+/*     02. Header     */
+/******************************/
+
+.mainHeader{
+	height: 60px;
+	background-color: rgb(176, 166, 93);
+	width: 100%;
+}
+
+#slogan img{
+	width: 150px;
+	height: 63px;
+	margin-top: -3px;
+	padding-left: 10px;
+}
+
+header img{
+	height: 60px;
+	vertical-align: bottom;
+}
+
+#slogan{
+	float: left;
+	argin: 12px;
+	font-size: 1.5em;
+	font-weight: bold;
+	-webkit-text-stroke: 1px black;
+}
+
+#slogan p{
+	margin: 0;
+}
+
+#logoRadio{
+	float: right;
+	margin-right: 20px;
+}
+
+/******************************/
+/*     03. Navigacija     */
+/******************************/
+
+nav{
+	height: 40px;
+	width: 100%;
+	margin: 0;
+	background-color: #362c11;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.glavniNav ul{
+	clear: both;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	display: block;
+	padding: 10px;
+	/*background-color: gold;*/
+	height: 20px;
+}
+
+.loginNav{
+	height: 40px;
+	width: 100%;
+	margin: 0;
+	background-color: #58481c;
+}
+
+.kontaktNav ul{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.kontaktNav ul li{
+	float: left;
+}
+
+.kontaktNav ul li a{
+	display: block;
+	padding: 10px;
+	height: 20px;
+	color:aliceblue;
+}
+
+.loginNav ul{
+	float: right;
+}
+
+.pomocniNav{
+	clear: both;
+}
+
+/* Hamburger dugme (osnovno) */
+.hamburger{
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 5px 0;
+    background: aliceblue; /* pošto ti linkovi u pomoćnom idu aliceblue */
+}
+
+/******************************/
+/*   04.  Da bude vidljiva nova poruka na chatu, prekopirano iz chat-style.css    */
+/******************************/
+
+.unread-badge{
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    min-width: 22px;
+    text-align: center;
+}
+
+
+.unread-badge-contact {
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    min-width: 22px;
+    text-align: center;
+}
+
+/******************************/
+/*     Da bude vidljiva nova obavještenja kada pošalje administrator    */
+/******************************/
+.unread-badge-obav {
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    min-width: 22px;
+    text-align: center;
+}
+
+
+/******************************/
+/*   05.  Prikaz albuma na početnoj     */
+/******************************/
+
+.albumPrikaz{
+	width: 100%;
+	min-height: 76vh;
+	margin: auto;
+	position: relative;
+	text-align: center;
+}
+
+.pregledAlbuma{
+	display: flex;
+	justify-content: space-between;
+}/* info i slikaIzabranogAlbuma unutar ovoga */
+
+.pregledAlbumaUredi{
+	display: flex;
+	justify-content: space-evenly;
+}/* info i slikaIzabranogAlbuma za uređivanje u admin panelu */
+
+.slikeIzabranogAlbuma{
+	padding-right: 2%;
+}
+
+.slikeIzabranogAlbuma img{
+	vertical-align: bottom;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}/* Pregled slika albuma izabranog izvođača */
+
+
+.slikeAlbuma img{
+	vertical-align: bottom;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/******************************/
+/*   06.  Komentari     */
+/******************************/
+
+.prikazKomentara{
+	width: 700px;
+	position: relative;
+	height: 100%;
+	
+}
+
+/*.prikazKomentara h4 a{
+	color: gold;
+	margin-left: 10px;
+	position: relative;
+	top: -5px;
+	left: 70px;
+}*/
+
+.sredinaNapomenaKomentari{
+	display: flex;
+	border: 1px solid silver;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
+	margin-top: 10px;
+}
+
+.prikazKomentara img{
+	height: 50px;
+	max-width: 70px;
+	/*position: absolute;*/
+}
+
+.prikazKomentara .vrijemeRecenzije{
+	color: #dbc96b;
+}
+
+.prikazKomentara .razmakIzmedju{
+	display: flex;
+	justify-content: space-between;
+}
+
+.prikazKomentara p{
+	padding: 0 10px 10px 10px;
+	text-align: center;
+}
+
+button .brisanjeKomentara{
+	width: 100%
+}
+
+.float-left{
+	float: left;
+}
+
+.float-right{
+	float: right;
+}
+
+.clear-both{
+	clear: both;
+}
+
+.komentarAdminAlbum{
+	border-left: 1px solid silver;
+	width: 300px;
+	margin-left: -9px;
+	height: 100%;
+}
+
+.komentarAdminAlbum img{
+	width: 70px;
+}
+
+.adminEditImage{
+	max-width: 300px;
+	/*max-height: 300px;*/
+}
+
+/******************************/
+/*     07. Footer     */
+/******************************/
+
+footer{
+    text-align: center;
+}
+
+.footer1{
+	width: 33%;
+	height: 160px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer1 h4{
+	margin: 0;
+}
+
+.footer2{
+	width: 33%;
+	height: 160px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: top;
+}
+
+.footer3{
+	width: 33%;
+	/*height: 160px;*/
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	vertical-align: top;
+}
+
+.fa-facebook-f{
+	color: #4b4bdf;
+}
+
+.fa-twitter{
+	color: #1da1f2;
+}
+
+.fa-instagram{
+	color: #e1306c;
+}
+
+.fa-tiktok{
+	color: #080807;
+}
+
+.logoRadio img{
+	height: 150px;
+	border-radius: 14px;
+	margin: 5px;
+	vertical-align: bottom;
+}
+
+/******************************/
+/*    08. Lista pjesma     */
+/******************************/
+
+.lista-pjesama {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+}
+.pjesma-item {
+    cursor: pointer;
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+}
+.pjesma-item:hover {
+    background-color: #f7f7f7;
+}
+.pjesma-item strong {
+    color: #f5e145;
+}
+.pjesma-item.active-song {
+    background-color: #0c5199;
+    border-left: 4px solid #007bff;
+}
+
+#filterInput {
+    border-radius: 25px;
+    padding-left: 15px;
+    border: 2px solid #007bff;
+}
+#filterInput:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    outline: none;
+}
+
+
+.table td{
+	color: cornsilk;
+}
+
+/******************************/
+/* 	09. Forme - registracija */
+/******************************/
+
+.profilCentar ol{
+	text-align: justify;
+}
+
+.podebljano{
+	font-weight: bold;
+}
+
+.login{
+	border: 1px solid;
+	width: 300px;
+	padding: 10px;
+	margin: auto;
+}
+
+.hrLinija{
+	border: 2px solid yellow;
+}
+
+.zabSifra{
+	font-size:0.8em;
+}
+
+
+textarea.saradniciUpdate{
+	width: 560px;
+	height: 130px;
+}
+
+
+.dodajTekst{
+	width: 600px;
+	height: 770px;
+	resize: none;
+	text-align: center;
+	font-size: larger;
+}
+
+.dodajTekstNapomene{
+	width: 100%;
+	height: 270px;
+	resize: none;
+	text-align: center;
+	font-size: larger;
+}
+/* textarea za unos većeg teksta  */
+
+/******************************/
+/*     10. Ocjene     */
+/******************************/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+.container form{
+	display: none;
+}
+input:checked ~ form{
+display: block;
+}
+form header{
+width: 100%;
+font-size: 25px;
+color: #fe7;
+font-weight: 500;
+margin: 5px 0 20px 0;
+text-align: center;
+transition: all 0.2s ease;
+}
+
+/*****************************/
+/*     11. Media Queries     */
+/*****************************/	
+
+/* Max-width width 330px */
+@media screen and (min-width: 330px) and (max-width: 767px){
+/* Ukloni float layout na mobilnom */
+	.glavniNav{
+		display: contents;
+	}
+
+    nav ul li, .kontaktNav ul,
+    .kontaktNav ul li{
+        float: none;
+    }
+
+	.loginNav{
+		display: contents;
+	}
+
+    .loginNav ul{
+        float: none;
+    }
+
+    /* Prikaži hamburgere */
+    .hamburger{
+        display: block;
+    }
+
+    /* Glavni nav: sakrij UL dok nije otvoren */
+    .glavniNav ul{
+        display: none;
+        clear: both;
+    }
+    .glavniNav ul.is-open{
+        display: block;
+    }
+
+	/* Pomoćni: sakrij panel dok nije otvoren */
+	.pomocniNav{
+		background-color: #58481c;
+	}
+
+    .pomocniNavPanel{
+        display: none;
+        clear: both;
+    }
+    .pomocniNavPanel.is-open{
+        display: block;
+    }
+
+	/* Malo lepši izgled linkova kad su jedan ispod drugog */
+    nav ul li a,
+    .kontaktNav ul li a{
+        height: auto;
+        padding: 12px 10px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+	.sredina{
+		display: unset;
+	}
+
+	.nazivAlbumPanel{
+		position: unset;
+	}
+
+	form input{
+		width: 100%;
+	}
+
+	.dodajTekst{
+		width: 90%;
+	}
+
+	.pregledAlbuma{
+		display: unset;
+	}
+
+	.pregledAlbumaUredi{
+		display: unset;
+	}
+}
+/* kraj min-width width 330px */
+
+
+/* Min-width width 768px */
+@media (min-width: 768px) {
+	
+}
+/* kraj min-width width 768px */
+
+
+/* Min-width width 992px */
+@media (min-width: 992px) {
+
+}
+/* kraj min-width width 992px */
+
+
+/* Min-width width 1200px */
+@media (min-width: 1200px) {
+	
+}
+/* kraj min-width width 1200px */

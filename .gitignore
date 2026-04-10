@@ -1,0 +1,105 @@
+###################################
+# CONFIG (osjetljivi podaci)
+###################################
+config.php
+config/config.php
+config/*.local.php
+.env
+
+###################################
+# DATABASE
+###################################
+database/*.sql
+*.sql
+
+###################################
+# LOG FILES
+###################################
+logovi/
+admin/logs/
+*.log
+error_log
+
+###################################
+# UPLOADS (user content)
+###################################
+
+# Albumi
+images/albumi/
+
+# Izvođači
+images/izvodjaci/
+
+# Izdavači / labels
+images/labels/
+
+# Profilne slike
+images/profilne/
+
+# Singlovi
+images/singlovi/
+
+# Stream slike
+images/streams/
+
+# Obavještenja upload
+images/uploads_obavjestenja/
+
+# Poruke upload
+images/uploads_poruke/
+
+###################################
+# CHAT UPLOADS
+###################################
+chat/images/
+chat/videos/
+
+###################################
+# CACHE / TEMP
+###################################
+cache/
+tmp/
+temp/
+
+###################################
+# SYSTEM FILES
+###################################
+.DS_Store
+Thumbs.db
+
+###################################
+# EDITOR / IDE
+###################################
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+###################################
+# ARCHIVES
+###################################
+*.zip
+*.rar
+*.tar
+*.gz
+
+###################################
+# NODE / PACKAGE (ako se koristi)
+###################################
+node_modules/
+
+###################################
+# VENDOR (ako koristiš composer)
+###################################
+vendor/
+
+###################################
+# OPTIONAL - TEST FILES
+###################################
+test/
+tests/
+
+###################################
+# OPTIONAL - PRIVATE NOTES
+###################################
+README.txt

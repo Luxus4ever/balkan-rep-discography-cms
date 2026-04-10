@@ -1,0 +1,1745 @@
+/* Autor: DLux
+   Kreirano: Jun 2022 - Februar 2026
+   Opis: Glavni CSS fajl
+*/
+
+/*****************************************
+Sadržaj:
+
+01. Glavni stilovi ()
+02. Header (201)
+03. Navigacija (240)
+04. Obavještenja (chat, administrator) ()
+05. Slider početna ()
+06. Prikaz slika albuma ()
+07. Dodaj albume panel ()
+08. Kartice ()
+09. Forma za pretragu ()
+10. Footer ()
+11. Info o albumu ()
+12. Forme registracija i login ()
+13. User Profili ()
+14. Ratings - Ocjene ()
+15. Media Queries 
+15.1. @media screen and (min-width: 1120px) and (max-width: 1540px)
+15.2. @media screen and (min-width: 1024px) and (max-width: 1119px)
+15.3. @media screen and (min-width: 768px) and (max-width: 1023px)
+15.4. @media screen and (min-width: 330px) and (max-width: 767px)
+******************************************/
+
+/*****************************************
+Colors:
+- Background main header - light gold rgb(176, 166, 93);
+- Background body - light green #c2eebc
+- Background body - #333
+- Background middle panel - #4f5450
+- Background left Panel - #3b3948
+- Backgrounds buttons - dark green #1b7343
+- Navigations - #362c11
+
+
+--------- Boje za upotrebu ---------
+background-color: rgb(37, 22, 206);
+background-color: seagreen; ---- Ova boja za testiranje
+background-color: indigo; ---- Ova boja za testiranje
+background-color: #3e3c3c;
+background-color: olive;
+#darkmagenta; #a39797;
+
+******************************************/
+
+
+/******************************/
+/*     01. Glavni stilovi     */
+/******************************/
+
+/*.chiron-sung-hk-diskografijaFonts {
+  font-family: "Chiron Sung HK", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}*/
+
+
+html{
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+}
+
+body{
+	background-color: #423842;/*#333;*/
+	color: silver; 
+	/*ont: 400 1rem/1.625rem "Merriweather", sans-serif;*/
+	/*ont-family: 'Source Sans Pro', sans-serif;*/
+	font-family: "Chiron Sung HK", serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	/*font-family: 'Poppins', sans-serif;*/
+}
+
+.boja{
+	color: #d7b811; /*#d3b40f;*/ /*gold;*/
+}
+
+#wrapper{
+	max-width: 90%;
+	margin: auto;
+	background-color: #423842; 
+	/*order: 1; */ /*Vidjeti order da se negdje upotrijebi.*/
+	min-height: 76vh;
+}
+
+.slider-pocetna{
+	position: relative;
+}
+
+#uvod{
+	background-color: #594b59;/*#0e0e44;*/
+	display: flex;
+	margin-top: 10px;
+}
+
+#uvodnaSlika{
+	display: flex;
+	height: 250px;/*auto;*
+	/*width: 450px;*/
+}
+
+#uvod-slika{
+	width: 100%;
+	height: 100%
+}
+
+.citatPocetna{
+	color: #ffd700;
+}
+
+article#pocetnaUvod{
+	width: 900px;
+	text-align: justify;
+	/*ext-align: center;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.uvod-tekst{
+	font-size: 1.10rem;
+	padding: 5px;
+}
+
+.dodatni-tekst-uvod{
+	text-align: center;
+	/*color: #ffe34f;*/
+	background-color: #3f1655; /*#4e2762;*/
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid #ffe34f;
+}
+
+.dodatni-tekst-uvod p{
+	margin-top: 0;
+}
+
+.naslov-centar{
+	text-align: center;
+	margin-top: 0;
+}
+
+.sredina{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.sredina2{
+	align-items: center;
+	text-align: center;
+}
+
+.sredina3{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.sredinaNapomena{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: justify-scontent;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*Ova klasa centrira tekst od napomene albuma, ali poravnato po lijevoj strani */
+
+.tekst-sredina{
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.opisDodavanjaSlike{
+	font-size: 12px;
+}
+
+.mt-0{
+	margin-top: 0;
+}
+
+form{
+	margin: 20px;
+}
+
+.warning{
+	border: 4px dashed red;
+	color: red;
+	background-color: #dddd69;
+	padding: 5px 10px 5px 10px;
+	border-radius: 10px;
+}/* tekst upozorenja/greške */
+
+/*
+*, ::after, ::before{
+	box-sizing: content-box;
+}*/
+
+.noBoxSizing *, ::after, ::before{
+	box-sizing: unset;
+}
+
+.hrLinija{
+	border: 2px solid yellow;
+}
+
+.hrLinija1{
+	border: 1px solid rgb(127, 127, 127);
+}
+
+.clickLink{
+	color: #c2ed71;
+}
+
+.clickLink:hover{
+	color: #9ae116;
+}
+
+.clickLink2{
+	color: #c2ed71;
+}/*Ovo je samo na link pjesme na početnoj stranici u opisu*/
+
+.regularTextColor{
+	color: silver;
+}
+
+/* Buy Me a coffe button*/
+/*Pomjereno na gore*/
+#bmc-wbtn {
+    /*bottom: 220px !important;*/
+}
+/* Buy Me a coffe button*/
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     02. Header     */
+/******************************/
+
+.mainHeader{
+	height: 60px;
+	background-color: rgb(176, 166, 93);
+	width: 100%;
+}
+
+#slogan img{
+	width: 150px;
+	height: 63px;
+	margin-top: -3px;
+	padding-left: 10px;
+}
+
+header img{
+	height: 60px;
+	vertical-align: bottom;
+}
+
+#slogan{
+	float: left;
+	/*argin: 12px;*/
+	font-size: 1.5em;
+	font-weight: bold;
+	-webkit-text-stroke: 1px black;
+}
+
+#slogan p{
+	margin: 0;
+}
+
+#logoRadio{
+	float: right;
+	margin-right: 20px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     03. Navigacija     */
+/******************************/
+
+nav{
+	height: 40px;
+	width: 100%;
+	margin: 0;
+	background-color: #362c11;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.glavniNav ul{
+	clear: both;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	display: block;
+	padding: 10px;
+	/*background-color: gold;*/
+	height: 20px;
+}
+
+.loginNav{
+	height: 40px;
+	width: 100%;
+	margin: 0;
+	background-color: #58481c;
+}
+
+.kontaktNav ul{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.kontaktNav ul li{
+	float: left;
+}
+
+.kontaktNav ul li a{
+	display: block;
+	padding: 10px;
+	height: 20px;
+	color:aliceblue;
+}
+
+.loginNav ul{
+	float: right;
+}
+
+.pomocniNav{
+	clear: both;
+}
+
+/* Hamburger dugme (osnovno) */
+.hamburger{
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 5px 0;
+    background: aliceblue; /* pošto ti linkovi u pomoćnom idu aliceblue */
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     04. Obavještenja     */
+/******************************/
+
+/* 🔸 Zajednički stil za sve obavještenja */
+.list-group-item {
+    transition: all 0.4s ease;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+/* ⚠️ Nepročitana obavještenja */
+.obav-neprocitano {
+    background-color: #e1bb43; /* svijetložuta */
+    border-top: 10px solid #f39c12; /* narandžasta traka gore */
+    animation: fadeIn 0.6s ease-in;
+}
+
+.obav-neprocitano .tekst-obav {
+    color: #222;
+}
+
+.obav-neprocitano .datum-obav {
+    color: #333;
+    font-weight: 600;
+}
+
+/* ✅ Pročitana obavještenja */
+.obav-procitano {
+    background-color: #b5ade9;
+    border-top: 10px solid #6c757d; /* siva traka gore */
+}
+
+.obav-procitano .tekst-obav {
+    color: #393838;
+}
+
+.obav-procitano .datum-obav {
+    color: #1a1a1a;
+    font-style: italic;
+}
+
+/* 🕶️ Naslov zajednički */
+.naslov-obav {
+    margin-bottom: 5px;
+    color: #111;
+}
+
+/* ✨ Fade-in animacija */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/******************************/
+/*     Da bude vidljiva nova poruka na chatu, prekopirano iz chat-style.css    */
+/******************************/
+
+.unread-badge{
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    min-width: 22px;
+    text-align: center;
+}
+
+/******************************/
+/*     Da bude vidljiva nova poruka kada odgovori administrator    */
+/******************************/
+.unread-badge-contact{
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    min-width: 22px;
+    text-align: center;
+}
+
+.msg-unread-admin {
+    color: red;
+    font-weight: bold;
+}
+
+.msg-read-admin {
+    color: darkred;
+}
+
+/******************************/
+/*     Da bude vidljiva nova obavještenja kada pošalje administrator    */
+/******************************/
+.unread-badge-obav {
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    min-width: 22px;
+    text-align: center;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     05. Slider početna     */
+/******************************/
+
+.okvir{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#slajd{
+	max-width: 700px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	order: 1px solid red;
+	flex-direction: row-reverse;
+}
+
+#sliderPicture{
+	width: 300px;
+}
+
+.sliderAlbumText{
+	text-align: center;
+}
+
+.w30{
+	width: 30%;
+}
+
+.b3{
+	height: 200px;
+}
+
+.text {
+	color: black; /*#f2f2f2;*/
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.active {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.text {font-size: 11px}
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.slider__btn {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	border: none;
+	background: rgba(255, 255, 255, 0.7);
+	font-family: inherit;
+	color: #333;
+	border-radius: 50%;
+	height: 4.5rem;
+	width: 4.5rem;
+	font-size: 2.25rem;
+	cursor: pointer;
+}
+
+.slider__btn--left {
+	left: 6%;
+	transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+	right: 6%;
+	transform: translate(50%, -50%);
+}
+
+#sliderArrowLeft img{
+	position: relative;
+	top: 0%;
+	right: 15%;
+}
+
+#sliderArrowRight img{
+	position: relative;
+	top: 0%;
+	left: 15%;
+}
+
+.dots {
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	cursor: pointer;
+}
+
+.dots__dot {
+	border: none;
+	background-color: #b9b9b9;
+	opacity: 0.7;
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	margin-right: 1.75rem;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #fff; 
+  /*background-color: #888;*/
+  opacity: 1;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     06. Prikaz slika albuma    */
+/******************************/
+
+/******************************/
+/*     Prikaz albuma na početnoj     */
+
+.albumPrikaz{
+	width: 100%;
+	min-height: 76vh;
+	margin: auto;
+	position: relative;
+	text-align: center;
+}
+
+.pregledAlbuma{
+	display: flex;
+	justify-content: space-between;
+}/* info i slikaIzabranogAlbuma unutar ovoga */
+
+
+.slikeIzabranogAlbuma{
+	padding-right: 2%;
+	max-width: 700px;
+}
+
+.slikeIzabranogAlbuma img{
+	vertical-align: bottom;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	padding: 2px;
+}/* Pregled slika albuma izabranog izvođača */
+
+.dodatneSlikeAlbuma{
+	width: 125px !important;
+	height: 125px !important;
+}/* Pregled ostalih (unutrašnjih) slika albuma izabranog izvođača */
+
+.profilPrikazAlbuma img{
+	vertical-align: bottom;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+}/* Prikaz veličine slika albuma na profilu korisnika */
+
+.slikeAlbumaPregled{
+	/*padding: 10px;*/
+	min-height: 76vh;
+}	/************* Klasa za pregled albuma po godini, u pretrazi i slično, kada nema dovoljno rezultata da drži body ***************/
+
+
+.slikeAlbuma img{
+	vertical-align: bottom;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*****************************/
+/* 	07.	Dodaj albume panel	  */
+/*****************************/
+.panel{
+	background-color: #3b3948;
+}
+
+.leftPanel{
+	background-color: #111211; /*#4f5450;*/
+}
+
+.visina{
+	min-height: 76vh;
+}
+
+.visina2{
+	min-height: 76vh;
+	max-height: 77vh;
+	overflow-y: scroll;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     08. Kartice    */
+/******************************/
+
+.myCard{
+	display: inline-block;
+	margin: 10px;
+	border: 1px solid #a77676;
+	width: 200px;
+	overflow: hidden;
+}
+
+.myCard-size1{
+	height: 300px;
+}
+
+.myCard-size2{
+	height: 350px;
+}
+
+.myCard img{
+	vertical-align: bottom;
+	width: 200px;
+	height: 200px;
+	padding: 0;
+}
+
+.myCard-header{
+	position: relative;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.myCard-body{
+	position: relative;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.myCard-title{
+	margin: 0.4em;
+	font-size: 0.8em;
+	height: 50px;
+}
+
+.myCard-text1{
+	margin: 0.4em;
+	font-size: 0.9em;
+}
+
+.myCard-text2{
+	margin: 0.4em;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*   09. Forma za pretragu     */
+/******************************/
+
+.pretragaForma{
+	text-align: center;
+	padding: 20px;
+	/*position: relative;
+	top: 33vh;*/
+}
+
+.pretragaForma #pretraga{
+	width: 30em;
+	height: 34px;
+	border-radius: 5px;
+}
+
+.pretragaForma #pretraziButton{
+	height: 33px;
+	border: none;
+	background-color: deepskyblue;
+	border-radius: 10px;
+	/*vertical-align: bottom;*/
+}
+
+.naslovPretrage{
+	color: #f08d8c; /*khaki;*/
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     10. Footer     */
+/******************************/
+
+footer{
+    text-align: center;
+}
+
+.footer1{
+	width: 33%;
+	height: 160px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer1 h4{
+	margin: 0;
+}
+
+.footer2{
+	width: 33%;
+	height: 160px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: top;
+}
+
+.footer3{
+	width: 33%;
+	/*height: 160px;*/
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	vertical-align: top;
+}
+
+.fa-facebook-f{
+	color: #4b4bdf;
+}
+
+.fa-twitter{
+	color: #1da1f2;
+}
+
+.fa-instagram{
+	color: #e1306c;
+}
+
+.fa-tiktok{
+	color: #080807;
+}
+
+.logoRadio img{
+	height: 150px;
+	border-radius: 14px;
+	margin: 5px;
+	vertical-align: bottom;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     11. Info o albumu     */
+/******************************/
+
+.info{
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+}
+
+.godinaIzd{
+	font-size: 1.3rem;
+	color: #2c9dff;
+}  /*---------------------------------------------- Ostaviti za sada (albumi po državi */
+
+.streamsOpis{
+	margin-bottom: -10px;
+	border-top: 1px solid;
+}
+
+.streams{
+	/*ax-height: 70px;*/
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid;
+}
+
+.streams img{
+	max-height: 70px;
+	background-color: white;
+	border-radius: 7px;
+}
+
+.o-izvodjacu-tekst{
+	padding: 10px;
+	margin: 10px;
+	text-align: justify;
+}
+
+/*-----     Lista pjesma     -----*/
+table, th, td{
+	border-collapse: collapse;
+	border: 1px solid;
+	text-align: center;
+	padding: 5px;
+	font-size: 18px;
+}
+
+table{
+	margin: auto;
+	max-width: 90%;
+}
+
+.listaPjesama{
+	/*width: 50%;*/
+	font-size: 0.88rem;
+	color: #bdbdbd;
+}
+
+
+.lista-pjesama {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+}
+.pjesma-item {
+    cursor: pointer;
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+}
+.pjesma-item:hover {
+    background-color: #f7f7f7;
+}
+.pjesma-item strong {
+    color: #f5e145;
+}
+.pjesma-item.active-song {
+    background-color: #0c5199;
+    border-left: 4px solid #007bff;
+}
+
+a{
+	text-decoration: none;
+	color: silver;
+}
+
+a:hover{
+	text-decoration: none;
+	color: silver;
+}
+
+/******************************/
+/*     Ostali albumi     */
+
+.ostaliAlbumi{
+	width: 100%;
+	margin: auto;
+	position: relative;
+	text-align: center;
+}
+
+.ostaliAlbumi a img:hover{
+	width: 250px;
+	transition-property: all;
+	transition-duration: 350ms;
+	transition-timing-function: linear;
+}
+
+.myCardHover img:hover{
+	width: 250px;
+	transition-property: all;
+	transition-duration: 350ms;
+	transition-timing-function: linear;
+}
+
+.albumiPoGodini{
+	width: 100%;
+	margin: auto;
+	position: relative;
+	text-align: center;
+}
+
+.drzava{
+	margin-top: 0;
+	padding-top: 5px;
+	padding-left: 15px;
+	/* naziv države oalbumu.php */
+}
+
+.bojaClanGrupe{
+	color: #97cfff;/*#2c9dff;*/
+}
+
+/******************************/
+/*     tekst Pjesme     */
+
+.tekstP{
+	text-align: center;
+	font-size: 1.3rem;
+	margin: 10px;
+	padding: 10px;
+}
+
+.drzavaTekstovi{
+	text-align: left;
+}
+
+.tekstNaziv{
+	color: #ffc113;
+}
+
+.feat{
+	color: #e0b53d;
+}
+
+.tekstovi-prikaz{
+	padding: 10px;
+	text-align: left;
+}
+
+
+/******************************/
+/*     O izvođačima     */
+
+.slikaIzvodjac{
+	max-width: 80%;
+	margin: auto;
+}
+
+.slikaIzvodjac img{
+	max-height: 30em;
+	max-width: 70%;
+}
+
+/******************************/
+/*     Inputi recenzije i dodavanje albuma    */
+
+.recenzija{
+	display: flex;
+	justify-content: center;
+}
+
+.recenzija textarea{
+	width: 700px;
+	height: 150px;
+}
+
+textarea.saradniciUpdate{
+	width: 560px;
+	height: 130px;
+}
+
+.recenzija input[type=submit]{
+	width: 700px;
+	height: 30px;
+}
+
+.dodajTekst{
+	width: 100%;
+	height: 770px;
+	resize: none;
+	text-align: center;
+	font-size: larger;
+}
+/* textarea za unos većeg teksta  */
+
+.dodajTekstNapomene{
+	width: 100%;
+	height: 270px;
+	resize: none;
+	text-align: center;
+	font-size: larger;
+}
+/* textarea za unos većeg teksta  */
+
+
+/******************************/
+/*     Prikaz komentra    */
+
+.razmakIzmedju{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
+}
+
+.prikazKomentara{
+	width: 700px;
+	border: 1px solid silver;
+	position: relative;
+	
+}
+
+.prikazKomentara h4 a{
+	color: gold;
+	margin-left: 10px;
+	position: relative;
+	top: -5px;
+	left: 70px;
+}
+
+.prikazKomentara img{
+	height: 50px;
+	max-width: 70px;
+	position: absolute;
+}
+
+.prikazKomentara .vrijemeRecenzije{
+	color: #dbc96b;
+}
+
+.prikazKomentara .razmakIzmedju{
+	display: flex;
+	justify-content: space-between;
+}
+
+.prikazKomentara p{
+	padding: 0 10px 10px 10px;
+	text-align: center;
+}
+
+
+
+
+
+.pregledAlbumaUredi{
+	display: flex;
+	justify-content: space-evenly;
+}/* info i slikaIzabranogAlbuma za dodavanje pjesama u insertsongs.php */
+
+.editAlbum img{
+	width: 250px;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     12. Forme registracija i login    */
+/******************************/
+
+.login{
+	border: 1px solid;
+	width: 300px;
+	padding: 10px;
+	margin: auto;
+}
+
+.zabSifra{
+	font-size:0.8em;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     13. User profil     */
+/******************************/
+
+.profilBocno{
+	width: 20%;
+	float: right;
+	margin-right: 10px;
+	border: ridge;
+}
+
+img.profilnaSlika{
+	max-width:100%;
+	border-radius: 4px;
+	max-height: 500px;
+}
+
+img.verifikacija{
+	width: 120px;
+}
+
+/* Profilne slke, kod iznad */
+
+.zastava{
+	width: 150px;
+	display: inline-block;
+	/*vertical-align: bottom;*/
+}
+
+.zastavaProfil{
+	width: 50%;
+	display: inline-block;
+	vertical-align: sub;
+}
+
+.zastavaProfilSlika{
+	width: 100%;
+	display: inline-block;
+	/*vertical-align: bottom;*/
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+main{
+    margin: auto;
+	width: 100%;
+	clear: both;
+	text-align: center;
+}
+
+.profilCentar{
+	width: 75%;
+	float: left;
+	margin-left: 10px;
+	padding: 10px;
+}
+
+.profilPun{
+	width: 95%;
+	background-color: aquamarine;
+	margin: auto;
+	padding: 10px;
+}
+
+.prikazRegistracijeNaSajt{
+	color: cornflowerblue;
+}
+
+.flexPrikaz{
+	display: flex;
+	justify-content: space-between;
+}
+
+.ocjenjeniAlbumi{
+	/*ackground-color: #26222c;*/
+	background-color: #34363f;/*#2c1e1e;*/
+	width: 50%;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+.ocjenjeniAlbumi ol li{
+	padding-right: 15px;
+}
+
+.komentarisaniAlbumi{
+	/*ackground-color: #2c1e1e;*/
+	background-color: #26222c;
+	width: 50%;
+	height: 500px;
+	overflow-y: scroll;
+
+	/*width: 49.5%;
+	height: 52vh;
+	border: inset 1px;
+	overflow-y: scroll;*/
+}
+
+.favoriteAlbums{
+	height: 52vh;
+	border: inset 1px;
+	overflow-y: scroll;
+	margin-top: 10px;
+}
+
+.profilPrikazFavAlbuma img{
+	width: 200px;
+	height: 200px;
+}
+
+.komentarisaniAlbumi ol li{
+	padding-right: 15px;
+}
+
+.profilCentar ol{
+	text-align: justify;
+}
+
+.podebljano{
+	font-weight: bold;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************/
+/*     14. Ratings - Ocjene     */
+/******************************/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.ratings{
+    padding-left: 0px;
+	border: 1px solid yellow;
+	background-color: #5b015b; /*darkmagenta;*/
+	padding: 20px;
+	margin: auto;
+	max-width: 600px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: grid;
+	border-radius: 7px;
+}
+
+.container{
+	position: relative;
+	padding: 20px 30px;
+	order: 1px solid #444;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.container .post{
+	display: none;
+}
+
+.container .text{
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.container .edit{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.container .star-widget input{
+	display: none;
+}
+
+.star-widget label{
+	font-size: 40px;
+	color: #878787;
+	padding: 10px;
+	float: right;
+	transition: all 0.2s ease;
+}
+
+.star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+
+.star-widget input:checked ~ label{
+	color: #fd4;
+}
+
+.star-widget input#rate-5:checked ~ label{
+	color: #fe7;
+	text-shadow: 0 0 20px #952;
+}
+
+#rate-1:checked ~ form header:before{
+	content: "Vaša ocjena је 1 ";
+  }
+#rate-2:checked ~ form header:before{
+	content: "Vaša ocjena је 2 ";
+}
+#rate-3:checked ~ form header:before{
+	content: "Vaša ocjena је 3 ";
+}
+#rate-4:checked ~ form header:before{
+	content: "Vaša ocjena је 4 ";
+}
+#rate-5:checked ~ form header:before{
+	content: "Vaša ocjena је 5";
+}
+#rate-6:checked ~ form header:before{
+	content: "Vaša ocjena је 6 ";
+}
+#rate-7:checked ~ form header:before{
+	content: "Vaša ocjena је 7 ";
+}
+#rate-8:checked ~ form header:before{
+	content: "Vaša ocjena је 8 ";
+}
+#rate-9:checked ~ form header:before{
+	content: "Vaša ocjena је 9 ";
+}
+#rate-10:checked ~ form header:before{
+	content: "Vaša ocjena је 10 ";
+}
+
+.container form{
+	display: none;
+}
+input:checked ~ form{
+	display: block;
+}
+form header{
+	width: 100%;
+	font-size: 25px;
+	color: #fe7;
+	font-weight: 500;
+	margin: 5px 0 20px 0;
+	text-align: center;
+	transition: all 0.2s ease;
+}
+
+form .btn{
+	height: 45px;
+	width: 100%;
+	margin: 15px 0;
+}
+
+form .btn button{
+	height: 100%;
+	width: 100%;
+	border: 1px solid #444;
+	outline: none;
+	background: #222;
+	color: #999;
+	font-size: 17px;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+form .btn button:hover{
+	background: #1b1b1b;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*****************************/
+/*     15. Media Queries     */
+/*****************************/	
+
+@media screen and (min-width: 1120px) and (max-width: 1540px){
+	#uvodnaSlika{
+		width: 850px;
+	}
+
+
+
+	.uvod-tekst{
+		font-size: 16px;
+	}
+
+	.streams img{
+		padding: max(5px, 2%);
+	}
+	
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1119px){
+	#uvodnaSlika{
+		width: 850px;
+	}
+
+
+	.uvod-tekst{
+		font-size: 15px;
+	}
+
+	#sliderPicture{
+		width: 100%;
+	}
+
+	.slide{
+		height: 250px;
+		
+	}
+
+	.streams img{
+		padding: 5px;
+	}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+	
+	#uvod{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#sliderPicture{
+		width: 100%;
+	}
+
+	.slide{
+		height: 200px;
+		
+	}
+
+	.streams img{
+		padding: max(5px, 2%);
+		margin-top: 5px;
+	}
+
+	article#pocetnaUvod{
+		margin-left: 10px;
+		margin-right: 10px;
+		width: unset;
+	}
+
+	.uvod-tekst{
+		font-size: 15px;
+	}
+
+	.profilBocno h2{
+		font-size: 1.3em;
+	}
+	.profilBocno h1{
+		font-size: 1.4rem;
+	}
+
+	#recenzija2{
+		width: 500px;
+	}
+
+	.ocjenjeniAlbumi{
+		height: 500px;
+	}
+
+	.komentarisaniAlbumi{
+		height: 500px;
+	}
+
+
+	.recenzija input[type=submit]{
+		width: 500px;
+	}
+
+	.footer3{
+		width: unset;
+		display: flex;
+		justify-content: center;
+		flex-direction: column-reverse;
+	}
+
+
+}
+
+
+@media screen and (min-width: 330px) and (max-width: 767px){
+	/* Ukloni float layout na mobilnom */
+	.glavniNav{
+		display: contents;
+	}
+
+    nav ul li, .kontaktNav ul,
+    .kontaktNav ul li{
+        float: none;
+    }
+
+	.loginNav{
+		display: contents;
+	}
+
+    .loginNav ul{
+        float: none;
+    }
+
+    /* Prikaži hamburgere */
+    .hamburger{
+        display: block;
+    }
+
+    /* Glavni nav: sakrij UL dok nije otvoren */
+    .glavniNav ul{
+        display: none;
+        clear: both;
+    }
+    .glavniNav ul.is-open{
+        display: block;
+    }
+
+    /* Pomoćni: sakrij panel dok nije otvoren */
+	.pomocniNav{
+		background-color: #58481c;
+	}
+
+    .pomocniNavPanel{
+        display: none;
+        clear: both;
+    }
+    .pomocniNavPanel.is-open{
+        display: block;
+    }
+
+    /* Malo lepši izgled linkova kad su jedan ispod drugog */
+    nav ul li a,
+    .kontaktNav ul li a{
+        height: auto;
+        padding: 12px 10px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+	.dots__dot {
+	margin-right: 0.75rem;
+	}
+
+	.slider__btn--left {
+	left: 13%;
+	transform: translate(-50%, -50%);
+	}
+
+	.slider__btn--right {
+		right: 13%;
+		transform: translate(50%, -50%);
+	}
+
+	#uvod{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#uvodnaSlika{
+		height: unset;
+		width: unset;
+	}
+
+	.streams img{
+		padding: max(5px, 2%);
+		margin-top: 5px;
+		height: 70%;
+	}
+
+	article#pocetnaUvod{
+		margin-left: 10px;
+		margin-right: 10px;
+		width: unset;
+	}
+
+	#slajd{
+		height: 230px;
+	}
+
+	#sliderPicture{
+		width: 100%;
+	}
+
+	.dots{
+		width: 100%;
+	}
+
+	.slikeIzabranogAlbuma img{
+		width: 100px;
+		height: 100px;
+	}
+
+	.dodatneSlikeAlbuma{
+		width: 100px !important;
+		height: 100px !important;
+	}
+
+	.uvod-tekst{
+		font-size: 15px;
+	}
+
+	.pretragaForma #pretraga{
+		width: 100%;
+	}
+
+	#pretraziButton{
+		margin-top: 10px;
+	}
+
+	#recenzija2{
+		width: 300px;
+	}
+
+	.recenzija input[type=submit]{
+		width: 300px;
+	}
+
+	.profilBocno{
+		width: auto;
+		float: none;
+	}
+
+	.profilCentar{
+		width: auto;
+		float: none;
+	}
+
+
+	.flexPrikaz{
+		display: unset;
+	}
+
+	.ocjenjeniAlbumi{
+		width: auto;
+		float: none;
+	}
+
+	.komentarisaniAlbumi{
+		width: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.favoriteAlbums{
+		height: 500px;
+	}
+
+	.razmakIzmedju{
+		display: unset;
+	}
+
+	.footer1{
+		width: unset;
+	}
+
+	.footer2{
+		width: unset;
+		display: unset;
+	}
+
+	.footer3{
+		width: unset;
+		display: flex;
+		justify-content: center;
+		flex-direction: column-reverse;
+	}
+
+}
+/* kraj min-width width 330px */

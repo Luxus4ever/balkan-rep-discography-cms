@@ -1,0 +1,55 @@
+<?php
+require_once "../config/bootstrap.php";
+//Stranica koja prikazuje korisnike za ADMINA i MODERATORA. 
+
+include "headerAdmin.php";
+
+include "./functions/masterAdmin.func.php";
+include "classes/masterClasses.class.php";
+
+$adEdPan= new adminEditPanel();
+
+@$idus= $_GET['idus'];
+@$sesStatusK= $_SESSION["statusKorisnika"];
+
+?>
+<div class="container-fluid adminMainPanel">
+    <div class="row">
+    
+            <?php
+            if(empty($idKorisnici) || empty($username)){
+                zabranjenPristupBezValidacije($sesStatusK);
+            }else
+            {
+                if(($sesStatusK==1) || ($sesStatusK==2))
+                {
+                    $adEdPan->leftSidePanel($idKorisnici);
+                }else{
+                    $poruka="NEMATE PRAVO PRISTUPA OVOJ STRANICI!";
+                    zabranjenPristup1("red", $poruka);
+
+                }
+                ?>
+                <div class="col-md-10 panel">
+                    <?php
+                    if(($sesStatusK==1) || ($sesStatusK==2))
+                    {
+                        adminEditUser($idus, $sesStatusK);
+                    }else{
+                            $poruka="NEMATE PRAVO PRISTUPA OVOJ STRANICI!";
+                            zabranjenPristup2("yellow", $poruka);
+                        }
+                    ?>
+                </div><!-- end col-md-10 --> 
+                <?php
+            }//end if else(validacija)
+            ?>    
+    </div><!-- end row --> 
+</div><!-- end container-fluid --> 
+<?php
+
+global $conn;
+
+include "footer.php";
+		
+
