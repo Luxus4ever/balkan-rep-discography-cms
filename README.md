@@ -14,6 +14,14 @@ The system includes:
 
 ---
 
+## Live Demo
+
+A fully functional version of the project is available online:
+
+https://diskografija.org
+
+---
+
 ## Features
 
 ### Core
@@ -54,13 +62,12 @@ The system includes:
 
 ## Installation
 
-1. Import database:
+This repository is **not intended for full local installation**, as sensitive data is intentionally excluded.
 
-```
-database/demo.sql
-```
+To run the project locally, you would need to:
 
-2. Configure:
+1. Create and configure your own MySQL database (structure not included)
+2. Update configuration in:
 
 ```
 config/config.example.php
@@ -70,11 +77,12 @@ config/config.example.php
 
 ---
 
-## Demo Notice
+## Notes
 
-This is a **demo / showcase version** of the project.
-
-Some features (admin actions, uploads) may be limited or disabled.
+- Database dumps are intentionally excluded
+- Uploaded media (images, files) are not included
+- Configuration files contain example values only
+- Some features may be limited in this version
 
 ---
 
